@@ -1,0 +1,22 @@
+---
+layout: default
+full_title: Select Web-顺德SEO网络营销网站建设推广
+---
+<div id="posts" class="container">
+  <div class="row">{% for post in site.categories["ueo"] %}
+    <section class="col-md-12">
+      <div class="post big">
+        <div class="row">
+          <div class="col-md-6 media"><img class="img-fluid" src="/images/{{ post.type-en }}/{{ post.image }}.jpg" alt="{{ post.title }}"></div>
+          <div class="col-md-6 caption">
+            <span class="post-title">{{ post.title }}</span>
+            <span class="post-date">{{ post.date | date:"%Y年%m月%d日" }}</span>
+            <span class="post-tag">{{ post.keywords }}</span>
+            <p class="post-description">{{ post.description }}</p>
+            <a class="btn btn-lg btn-success" href="{{ site.url }}{{ post.url }}">阅读全文</a>
+          </div>
+        </div>
+      </div>
+    </section>{% endfor %}
+  </div>
+</div>
